@@ -15,7 +15,7 @@ export default class App extends Component {
       this.createTodoItem('Have a lunch'),
     ],
     term: '',
-    filter: ''
+    filter: 'all'
   };
 
   createTodoItem(label) {
@@ -111,9 +111,8 @@ export default class App extends Component {
     }
   };
 
-  onFilterChange(filter) {
-    this.setState({filter: filter});
-    console.log(filter)
+  onFilterChange = (filter) => {
+    this.setState({filter});
   };
 
   render() {
